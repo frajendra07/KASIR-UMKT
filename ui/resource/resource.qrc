@@ -1,0 +1,16 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>shop-solid (1).png</file>
+    <file>shop-solid.png</file>
+    <file>right-from-bracket-solid.png</file>
+    <file>gear-solid.png</file>
+    <file>user-solid.png</file>
+    <file>credit-card-solid.png</file>
+    <file>cash-register-solid.png</file>
+    <file>box-solid.png</file>
+    <file>cart-shopping-solid.png</file>
+    <file>gauge-high-solid.png</file>
+    <file>dashboard.png</file>
+    <file>cashier.png</file>
+  </qresource>
+</RCC>

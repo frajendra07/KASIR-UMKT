@@ -1,6 +1,7 @@
 <RCC>
   <qresource prefix="icons">
     <file>shop-solid (1).png</file>
+    <file>bell-solid.png</file>
     <file>shop-solid.png</file>
     <file>right-from-bracket-solid.png</file>
     <file>gear-solid.png</file>

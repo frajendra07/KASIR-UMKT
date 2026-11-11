@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="icons">
+    <file>magnifying-glass-solid.png</file>
     <file>shop-solid (1).png</file>
     <file>bell-solid.png</file>
     <file>shop-solid.png</file>

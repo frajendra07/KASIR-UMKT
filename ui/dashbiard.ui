@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1399</width>
+    <width>1418</width>
     <height>1026</height>
    </rect>
   </property>
@@ -25,7 +25,7 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
+  <widget class="QWidget" name="main_Widget">
    <layout class="QHBoxLayout" name="horizontalLayout">
     <property name="leftMargin">
      <number>0</number>
@@ -40,7 +40,7 @@
      <number>0</number>
     </property>
     <item>
-     <widget class="QFrame" name="frame">
+     <widget class="QFrame" name="sidebar">
       <property name="enabled">
        <bool>true</bool>
       </property>
@@ -464,9 +464,9 @@ QPushButton {
      </widget>
     </item>
     <item>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
+     <layout class="QVBoxLayout" name="Layout_Page">
       <item>
-       <widget class="QFrame" name="frame_2">
+       <widget class="QFrame" name="navbar">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
           <horstretch>80</horstretch>
@@ -506,7 +506,7 @@ QPushButton {
           </spacer>
          </item>
          <item>
-          <widget class="QLabel" name="label">
+          <widget class="QLabel" name="main_Label">
            <property name="font">
             <font>
              <pointsize>20</pointsize>
@@ -533,7 +533,7 @@ QPushButton {
           </spacer>
          </item>
          <item>
-          <widget class="QLabel" name="label_2">
+          <widget class="QLabel" name="user_Label">
            <property name="font">
             <font>
              <family>Verdana</family>
@@ -582,9 +582,14 @@ QPushButton {
        </widget>
       </item>
       <item>
-       <widget class="QStackedWidget" name="notificaton">
+       <widget class="QStackedWidget" name="Main_Page">
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    color: #042b62; }
+</string>
+        </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>4</number>
         </property>
         <widget class="QWidget" name="page_dashboard">
          <property name="enabled">
@@ -592,7 +597,7 @@ QPushButton {
          </property>
          <layout class="QGridLayout" name="gridLayout_2">
           <item row="0" column="0">
-           <widget class="QFrame" name="frame_3">
+           <widget class="QFrame" name="main_frame_dashboard">
             <property name="enabled">
              <bool>true</bool>
             </property>
@@ -610,7 +615,7 @@ QPushButton {
             </property>
             <layout class="QGridLayout" name="gridLayout" rowstretch="1,2">
              <item row="1" column="2" colspan="2">
-              <widget class="QFrame" name="frame_9">
+              <widget class="QFrame" name="last_transaction_frame">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                  <horstretch>0</horstretch>
@@ -647,7 +652,7 @@ QPushButton {
                  </spacer>
                 </item>
                 <item row="5" column="1" alignment="Qt::AlignmentFlag::AlignHCenter">
-                 <widget class="QPushButton" name="viewButton_2">
+                 <widget class="QPushButton" name="last_transaction_view_button">
                   <property name="font">
                    <font>
                     <pointsize>11</pointsize>
@@ -703,7 +708,7 @@ QPushButton {
                  </spacer>
                 </item>
                 <item row="3" column="1">
-                 <widget class="QTableWidget" name="tableWidget">
+                 <widget class="QTableWidget" name="last_transaction_view">
                   <property name="font">
                    <font>
                     <pointsize>11</pointsize>
@@ -781,7 +786,7 @@ background-color : white;}</string>
                  </spacer>
                 </item>
                 <item row="1" column="1" alignment="Qt::AlignmentFlag::AlignHCenter">
-                 <widget class="QLabel" name="label_10">
+                 <widget class="QLabel" name="last_transaction_label">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -804,10 +809,7 @@ background-color : white;}</string>
                    <enum>Qt::LayoutDirection::LeftToRight</enum>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">QLabel {
-    color: #042b62; 
-text-align : center;
-}</string>
+                   <string notr="true"/>
                   </property>
                   <property name="text">
                    <string>Transaksi Terakhir</string>
@@ -850,7 +852,7 @@ text-align : center;
               </widget>
              </item>
              <item row="1" column="0" colspan="2">
-              <widget class="QFrame" name="frame_8">
+              <widget class="QFrame" name="sale_trend_frame">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                  <horstretch>0</horstretch>
@@ -887,7 +889,7 @@ text-align : center;
                  </spacer>
                 </item>
                 <item row="1" column="1" colspan="2" alignment="Qt::AlignmentFlag::AlignHCenter">
-                 <widget class="QLabel" name="label_9">
+                 <widget class="QLabel" name="sale_trend_label">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -910,10 +912,7 @@ text-align : center;
                    <enum>Qt::LayoutDirection::LeftToRight</enum>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">QLabel {
-    color: #042b62; 
-text-align : center;
-}</string>
+                   <string notr="true"/>
                   </property>
                   <property name="text">
                    <string>Tren Penjualan minggu ini</string>
@@ -953,7 +952,7 @@ text-align : center;
                  </spacer>
                 </item>
                 <item row="3" column="1" colspan="2">
-                 <widget class="QWidget" name="widget" native="true">
+                 <widget class="QWidget" name="sale_trend_graph" native="true">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                     <horstretch>0</horstretch>
@@ -1002,7 +1001,7 @@ background-color: white; border-radius: 5px;}</string>
               </widget>
              </item>
              <item row="0" column="3">
-              <widget class="QFrame" name="frame_7">
+              <widget class="QFrame" name="stock_crisis_frame">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                  <horstretch>0</horstretch>
@@ -1023,7 +1022,7 @@ background-color: white; border-radius: 5px;}</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_3">
                 <item row="0" column="0" alignment="Qt::AlignmentFlag::AlignHCenter">
-                 <widget class="QLabel" name="label_8">
+                 <widget class="QLabel" name="stock_crisi_label">
                   <property name="font">
                    <font>
                     <pointsize>11</pointsize>
@@ -1031,9 +1030,7 @@ background-color: white; border-radius: 5px;}</string>
                    </font>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">QLabel {
-    color: #042b62; }
-</string>
+                   <string notr="true"/>
                   </property>
                   <property name="text">
                    <string>Stok Krisis</string>
@@ -1041,7 +1038,7 @@ background-color: white; border-radius: 5px;}</string>
                  </widget>
                 </item>
                 <item row="1" column="0">
-                 <widget class="QListWidget" name="listWidget_2">
+                 <widget class="QListWidget" name="stock_crisi_list">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                     <horstretch>0</horstretch>
@@ -1094,7 +1091,7 @@ QPushButton {
               </widget>
              </item>
              <item row="0" column="0">
-              <widget class="QFrame" name="frame_4">
+              <widget class="QFrame" name="total_sale_frame">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                  <horstretch>0</horstretch>
@@ -1115,7 +1112,7 @@ QPushButton {
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_3">
                 <item alignment="Qt::AlignmentFlag::AlignHCenter">
-                 <widget class="QLabel" name="label_3">
+                 <widget class="QLabel" name="total_sale_label">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -1129,9 +1126,7 @@ QPushButton {
                    </font>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">QLabel {
-    color: #042b62; 
-}</string>
+                   <string notr="true"/>
                   </property>
                   <property name="text">
                    <string>Total Penjualan Hari Ini</string>
@@ -1139,7 +1134,7 @@ QPushButton {
                  </widget>
                 </item>
                 <item>
-                 <widget class="QWidget" name="TodaySell" native="true">
+                 <widget class="QWidget" name="graph_sale" native="true">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                     <horstretch>0</horstretch>
@@ -1159,7 +1154,7 @@ background-color: white; border-radius: 5px;}</string>
                  </widget>
                 </item>
                 <item alignment="Qt::AlignmentFlag::AlignHCenter">
-                 <widget class="QLabel" name="label_4">
+                 <widget class="QLabel" name="total_sale_index">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -1173,9 +1168,7 @@ background-color: white; border-radius: 5px;}</string>
                    </font>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">QLabel {
-    color: #042b62; 
-}</string>
+                   <string notr="true"/>
                   </property>
                   <property name="text">
                    <string>IDR 00.000.000</string>
@@ -1186,7 +1179,7 @@ background-color: white; border-radius: 5px;}</string>
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QFrame" name="frame_5">
+              <widget class="QFrame" name="total_transaction_frame">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                  <horstretch>0</horstretch>
@@ -1205,9 +1198,9 @@ background-color: white; border-radius: 5px;}</string>
                <property name="frameShadow">
                 <enum>QFrame::Shadow::Raised</enum>
                </property>
-               <layout class="QVBoxLayout" name="verticalLayout_4">
+               <layout class="QVBoxLayout" name="verticalLayout_2">
                 <item alignment="Qt::AlignmentFlag::AlignHCenter">
-                 <widget class="QLabel" name="label_5">
+                 <widget class="QLabel" name="total_transaction_label">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Preferred" vsizetype="Ignored">
                     <horstretch>0</horstretch>
@@ -1221,9 +1214,7 @@ background-color: white; border-radius: 5px;}</string>
                    </font>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">QLabel {
-    color: #042b62; 
-}</string>
+                   <string notr="true"/>
                   </property>
                   <property name="text">
                    <string>Total Transaksi Hari Ini</string>
@@ -1231,31 +1222,35 @@ background-color: white; border-radius: 5px;}</string>
                  </widget>
                 </item>
                 <item alignment="Qt::AlignmentFlag::AlignHCenter">
-                 <widget class="QLabel" name="Transaksi">
+                 <widget class="QLabel" name="total_transaction_icon">
                   <property name="sizePolicy">
-                   <sizepolicy hsizetype="Preferred" vsizetype="Ignored">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
-                  <property name="font">
-                   <font>
-                    <pointsize>10</pointsize>
-                    <bold>true</bold>
-                   </font>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">QLabel {
-    color: #042b62; 
-}</string>
+                  <property name="maximumSize">
+                   <size>
+                    <width>150</width>
+                    <height>150</height>
+                   </size>
                   </property>
                   <property name="text">
-                   <string>Label</string>
+                   <string/>
+                  </property>
+                  <property name="pixmap">
+                   <pixmap resource="resource/resource.qrc">:/icons/cart-shopping-solid.png</pixmap>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>true</bool>
+                  </property>
+                  <property name="wordWrap">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
                 <item alignment="Qt::AlignmentFlag::AlignHCenter">
-                 <widget class="QLabel" name="label_7">
+                 <widget class="QLabel" name="total_transaction_index">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Preferred" vsizetype="Ignored">
                     <horstretch>0</horstretch>
@@ -1269,9 +1264,7 @@ background-color: white; border-radius: 5px;}</string>
                    </font>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">QLabel {
-    color: #042b62; 
-}</string>
+                   <string notr="true"/>
                   </property>
                   <property name="text">
                    <string>000 Transaksi</string>
@@ -1282,7 +1275,7 @@ background-color: white; border-radius: 5px;}</string>
               </widget>
              </item>
              <item row="0" column="2">
-              <widget class="QFrame" name="frame_6">
+              <widget class="QFrame" name="best_item_frame">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                  <horstretch>0</horstretch>
@@ -1303,7 +1296,7 @@ background-color: white; border-radius: 5px;}</string>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_5">
                 <item alignment="Qt::AlignmentFlag::AlignHCenter">
-                 <widget class="QLabel" name="label_6">
+                 <widget class="QLabel" name="best_item_label">
                   <property name="font">
                    <font>
                     <pointsize>11</pointsize>
@@ -1311,9 +1304,7 @@ background-color: white; border-radius: 5px;}</string>
                    </font>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">QLabel {
-    color: #042b62; }
-</string>
+                   <string notr="true"/>
                   </property>
                   <property name="text">
                    <string>Barang Terlaris</string>
@@ -1321,7 +1312,7 @@ background-color: white; border-radius: 5px;}</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QListWidget" name="listWidget">
+                 <widget class="QListWidget" name="best_item_list">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                     <horstretch>0</horstretch>
@@ -1363,10 +1354,10 @@ background-color: white; border-radius: 5px;}</string>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_7">
           <item>
-           <widget class="QWidget" name="widget_2" native="true">
+           <widget class="QWidget" name="widget_kasir" native="true">
             <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="3">
              <item>
-              <widget class="QFrame" name="frame_11">
+              <widget class="QFrame" name="main_frame_kasir">
                <property name="styleSheet">
                 <string notr="true">QFrame {
     background-color: #4D8DBA; /* Warna kartu putih */
@@ -1469,6 +1460,12 @@ background-color: white; border-radius: 5px;}</string>
                      </item>
                      <item>
                       <widget class="QLineEdit" name="lineEdit">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
                        <property name="font">
                         <font>
                          <pointsize>11</pointsize>
@@ -1532,6 +1529,7 @@ QPushButton:hover {
 QPushButton {
     text-align: center;
 	background-color:  #086288;
+padding: 5px;
 }</string>
                        </property>
                        <property name="text">
@@ -1603,8 +1601,11 @@ background-color : white;}</string>
                      <property name="sortingEnabled">
                       <bool>false</bool>
                      </property>
+                     <attribute name="horizontalHeaderCascadingSectionResizes">
+                      <bool>true</bool>
+                     </attribute>
                      <attribute name="horizontalHeaderDefaultSectionSize">
-                      <number>80</number>
+                      <number>115</number>
                      </attribute>
                      <attribute name="horizontalHeaderStretchLastSection">
                       <bool>true</bool>
@@ -1729,6 +1730,11 @@ background-color : white;}</string>
                          <bold>true</bold>
                         </font>
                        </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLabel {
+    color: #042b62; }
+</string>
+                       </property>
                        <property name="text">
                         <string>ID Transaksi :</string>
                        </property>
@@ -1809,6 +1815,11 @@ background-color : white;}</string>
                           <bold>true</bold>
                          </font>
                         </property>
+                        <property name="styleSheet">
+                         <string notr="true">QLabel {
+    color: #042b62; }
+</string>
+                        </property>
                         <property name="text">
                          <string>Rincian Transaksi</string>
                         </property>
@@ -1822,6 +1833,11 @@ background-color : white;}</string>
                           <bold>true</bold>
                          </font>
                         </property>
+                        <property name="styleSheet">
+                         <string notr="true">QLabel {
+    color: #042b62; }
+</string>
+                        </property>
                         <property name="text">
                          <string>Subtotal :</string>
                         </property>
@@ -1834,6 +1850,11 @@ background-color : white;}</string>
                           <pointsize>14</pointsize>
                           <bold>true</bold>
                          </font>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QLabel {
+    color: #042b62; }
+</string>
                         </property>
                         <property name="text">
                          <string>Diskon :</string>
@@ -1862,6 +1883,11 @@ background-color : white;}</string>
                              <pointsize>14</pointsize>
                              <bold>true</bold>
                             </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QLabel {
+    color: #042b62; }
+</string>
                            </property>
                            <property name="text">
                             <string>Total :</string>
@@ -1952,6 +1978,11 @@ background-color : white;}</string>
                           <pointsize>16</pointsize>
                           <bold>true</bold>
                          </font>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QLabel {
+    color: #042b62; }
+</string>
                         </property>
                         <property name="text">
                          <string>Pembayaran</string>
@@ -2048,7 +2079,7 @@ QPushButton {
                          <string notr="true"/>
                         </property>
                         <property name="currentIndex">
-                         <number>0</number>
+                         <number>1</number>
                         </property>
                         <widget class="QWidget" name="page_4">
                          <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -2135,39 +2166,6 @@ QPushButton {
                                </property>
                               </widget>
                              </item>
-                             <item>
-                              <widget class="QPushButton" name="pushButton_7">
-                               <property name="font">
-                                <font>
-                                 <family>Verdana</family>
-                                 <pointsize>12</pointsize>
-                                 <bold>true</bold>
-                                </font>
-                               </property>
-                               <property name="cursor">
-                                <cursorShape>PointingHandCursor</cursorShape>
-                               </property>
-                               <property name="styleSheet">
-                                <string notr="true">/* Efek saat tombol disorot mouse (Hover) */
-QPushButton:hover {
-    background-color: #334155; /* Berubah jadi biru sedikit lebih terang saat disorot */
-    border-left: 4px solid #3B82F6; /* Muncul garis biru neon di pinggir kiri */
-}
-QPushButton {
-    text-align: center;
-    padding-left: 15px;
-	height: 40px;
-	background-color:  #086288;
-}</string>
-                               </property>
-                               <property name="text">
-                                <string>Proses Pembayaran</string>
-                               </property>
-                               <property name="flat">
-                                <bool>true</bool>
-                               </property>
-                              </widget>
-                             </item>
                             </layout>
                            </widget>
                           </item>
@@ -2185,43 +2183,6 @@ QPushButton {
                             </property>
                             <layout class="QVBoxLayout" name="verticalLayout_9">
                              <item>
-                              <widget class="QLabel" name="label_21">
-                               <property name="font">
-                                <font>
-                                 <family>Verdana</family>
-                                 <pointsize>11</pointsize>
-                                 <bold>true</bold>
-                                </font>
-                               </property>
-                               <property name="text">
-                                <string>ID. Refrensi :</string>
-                               </property>
-                              </widget>
-                             </item>
-                             <item>
-                              <widget class="QLineEdit" name="lineEdit_10">
-                               <property name="font">
-                                <font>
-                                 <pointsize>11</pointsize>
-                                 <bold>true</bold>
-                                </font>
-                               </property>
-                               <property name="styleSheet">
-                                <string notr="true">QLineEdit {
-    background-color: white;
-    color: black;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    padding: 5px;
-	height : 40px;
-}</string>
-                               </property>
-                               <property name="readOnly">
-                                <bool>false</bool>
-                               </property>
-                              </widget>
-                             </item>
-                             <item>
                               <widget class="QLabel" name="label_19">
                                <property name="font">
                                 <font>
@@ -2229,6 +2190,11 @@ QPushButton {
                                  <pointsize>11</pointsize>
                                  <bold>true</bold>
                                 </font>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">QLabel {
+    color: #042b62; }
+</string>
                                </property>
                                <property name="text">
                                 <string>Nominal :</string>
@@ -2250,7 +2216,6 @@ QPushButton {
     border: 1px solid #cccccc;
     border-radius: 5px;
     padding: 5px;
-	height : 40px;
 }</string>
                                </property>
                                <property name="readOnly">
@@ -2259,35 +2224,87 @@ QPushButton {
                               </widget>
                              </item>
                              <item>
-                              <widget class="QPushButton" name="pushButton_6">
+                              <widget class="QLabel" name="label_21">
                                <property name="font">
                                 <font>
                                  <family>Verdana</family>
-                                 <pointsize>12</pointsize>
+                                 <pointsize>11</pointsize>
                                  <bold>true</bold>
                                 </font>
                                </property>
-                               <property name="cursor">
-                                <cursorShape>PointingHandCursor</cursorShape>
-                               </property>
                                <property name="styleSheet">
-                                <string notr="true">/* Efek saat tombol disorot mouse (Hover) */
-QPushButton:hover {
-    background-color: #334155; /* Berubah jadi biru sedikit lebih terang saat disorot */
-    border-left: 4px solid #3B82F6; /* Muncul garis biru neon di pinggir kiri */
-}
-QPushButton {
-    text-align: center;
-    padding-left: 15px;
-	height: 40px;
-	background-color:  #086288;
-}</string>
+                                <string notr="true">QLabel {
+    color: #042b62; }
+</string>
                                </property>
                                <property name="text">
-                                <string>Proses Pembayaran</string>
+                                <string>ID. Refrensi :</string>
                                </property>
-                               <property name="flat">
-                                <bool>true</bool>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QLineEdit" name="lineEdit_10">
+                               <property name="font">
+                                <font>
+                                 <pointsize>11</pointsize>
+                                 <bold>true</bold>
+                                </font>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">QLineEdit {
+    background-color: white;
+    color: black;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 5px;}</string>
+                               </property>
+                               <property name="readOnly">
+                                <bool>false</bool>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QLabel" name="label_26">
+                               <property name="font">
+                                <font>
+                                 <family>Verdana</family>
+                                 <pointsize>11</pointsize>
+                                 <bold>true</bold>
+                                </font>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">QLabel {
+    color: #042b62; }
+</string>
+                               </property>
+                               <property name="text">
+                                <string>Penyedia :</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QComboBox" name="comboBox_2">
+                               <property name="styleSheet">
+                                <string notr="true">QComboBox {
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 6px 10px;
+    font-size: 14px;
+    color: #495057;
+}
+
+QComboBox:focus {
+    border: 2px solid #80bdff;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px;
+    border-left: 1px solid #ced4da;
+}
+</string>
                                </property>
                               </widget>
                              </item>
@@ -2307,43 +2324,6 @@ QPushButton {
                              <enum>QFrame::Shadow::Raised</enum>
                             </property>
                             <layout class="QVBoxLayout" name="verticalLayout_12">
-                             <item>
-                              <widget class="QLabel" name="label_22">
-                               <property name="font">
-                                <font>
-                                 <family>Verdana</family>
-                                 <pointsize>11</pointsize>
-                                 <bold>true</bold>
-                                </font>
-                               </property>
-                               <property name="text">
-                                <string>ID. Refrensi :</string>
-                               </property>
-                              </widget>
-                             </item>
-                             <item>
-                              <widget class="QLineEdit" name="lineEdit_11">
-                               <property name="font">
-                                <font>
-                                 <pointsize>11</pointsize>
-                                 <bold>true</bold>
-                                </font>
-                               </property>
-                               <property name="styleSheet">
-                                <string notr="true">QLineEdit {
-    background-color: white;
-    color: black;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    padding: 5px;
-	height : 40px;
-}</string>
-                               </property>
-                               <property name="readOnly">
-                                <bool>false</bool>
-                               </property>
-                              </widget>
-                             </item>
                              <item>
                               <widget class="QLabel" name="label_20">
                                <property name="font">
@@ -2373,7 +2353,6 @@ QPushButton {
     border: 1px solid #cccccc;
     border-radius: 5px;
     padding: 5px;
-	height : 40px;
 }</string>
                                </property>
                                <property name="readOnly">
@@ -2382,35 +2361,78 @@ QPushButton {
                               </widget>
                              </item>
                              <item>
-                              <widget class="QPushButton" name="pushButton_8">
+                              <widget class="QLabel" name="label_22">
                                <property name="font">
                                 <font>
                                  <family>Verdana</family>
-                                 <pointsize>12</pointsize>
+                                 <pointsize>11</pointsize>
                                  <bold>true</bold>
                                 </font>
                                </property>
-                               <property name="cursor">
-                                <cursorShape>PointingHandCursor</cursorShape>
+                               <property name="text">
+                                <string>ID. Refrensi :</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QLineEdit" name="lineEdit_11">
+                               <property name="font">
+                                <font>
+                                 <pointsize>11</pointsize>
+                                 <bold>true</bold>
+                                </font>
                                </property>
                                <property name="styleSheet">
-                                <string notr="true">/* Efek saat tombol disorot mouse (Hover) */
-QPushButton:hover {
-    background-color: #334155; /* Berubah jadi biru sedikit lebih terang saat disorot */
-    border-left: 4px solid #3B82F6; /* Muncul garis biru neon di pinggir kiri */
-}
-QPushButton {
-    text-align: center;
-    padding-left: 15px;
-	height: 40px;
-	background-color:  #086288;
+                                <string notr="true">QLineEdit {
+    background-color: white;
+    color: black;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 5px;
 }</string>
                                </property>
-                               <property name="text">
-                                <string>Proses Pembayaran</string>
+                               <property name="readOnly">
+                                <bool>false</bool>
                                </property>
-                               <property name="flat">
-                                <bool>true</bool>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QLabel" name="label_25">
+                               <property name="font">
+                                <font>
+                                 <family>Verdana</family>
+                                 <pointsize>11</pointsize>
+                                 <bold>true</bold>
+                                </font>
+                               </property>
+                               <property name="text">
+                                <string>Bank :</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QComboBox" name="comboBox">
+                               <property name="styleSheet">
+                                <string notr="true">QComboBox {
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 6px 10px;
+    font-size: 14px;
+    color: #495057;
+}
+
+QComboBox:focus {
+    border: 2px solid #80bdff;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px;
+    border-left: 1px solid #ced4da;
+}
+</string>
                                </property>
                               </widget>
                              </item>
@@ -2444,6 +2466,171 @@ QPushButton {
                      <property name="frameShadow">
                       <enum>QFrame::Shadow::Raised</enum>
                      </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_8">
+                      <item alignment="Qt::AlignmentFlag::AlignHCenter">
+                       <widget class="QLabel" name="label_27">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <family>Verdana</family>
+                          <pointsize>11</pointsize>
+                          <bold>true</bold>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>Aksi Transaksi</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="pushButton_9">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <family>Verdana</family>
+                          <pointsize>12</pointsize>
+                          <bold>true</bold>
+                         </font>
+                        </property>
+                        <property name="cursor">
+                         <cursorShape>PointingHandCursor</cursorShape>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QPushButton {
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #218838;
+}</string>
+                        </property>
+                        <property name="text">
+                         <string>PROSES PEMBAYARAN</string>
+                        </property>
+                        <property name="icon">
+                         <iconset>
+                          <normaloff>resource/circle-check-solid.png</normaloff>resource/circle-check-solid.png</iconset>
+                        </property>
+                        <property name="iconSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="flat">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="pushButton_10">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <family>Verdana</family>
+                          <pointsize>12</pointsize>
+                          <bold>true</bold>
+                         </font>
+                        </property>
+                        <property name="cursor">
+                         <cursorShape>PointingHandCursor</cursorShape>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">/* Efek saat tombol disorot mouse (Hover) */
+QPushButton:hover {
+    background-color: #334155; /* Berubah jadi biru sedikit lebih terang saat disorot */
+    border-left: 4px solid #3B82F6; /* Muncul garis biru neon di pinggir kiri */
+}
+QPushButton {
+    text-align: center;
+	background-color:  #086288;
+}</string>
+                        </property>
+                        <property name="text">
+                         <string>CETAK STRUK</string>
+                        </property>
+                        <property name="icon">
+                         <iconset>
+                          <normaloff>resource/receipt-solid.png</normaloff>resource/receipt-solid.png</iconset>
+                        </property>
+                        <property name="iconSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="flat">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="pushButton_11">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <family>Verdana</family>
+                          <pointsize>12</pointsize>
+                          <bold>true</bold>
+                         </font>
+                        </property>
+                        <property name="cursor">
+                         <cursorShape>PointingHandCursor</cursorShape>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QPushButton {
+    background-color: #dc3545;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #c82333;
+}</string>
+                        </property>
+                        <property name="text">
+                         <string>BATALKAN TRANSAKSI</string>
+                        </property>
+                        <property name="icon">
+                         <iconset>
+                          <normaloff>resource/trash-can-solid.png</normaloff>resource/trash-can-solid.png</iconset>
+                        </property>
+                        <property name="iconSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="flat">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                   </layout>
@@ -2457,7 +2644,1690 @@ QPushButton {
           </item>
          </layout>
         </widget>
-        <widget class="QWidget" name="page"/>
+        <widget class="QWidget" name="page_inventory">
+         <layout class="QGridLayout" name="gridLayout_6">
+          <item row="0" column="0">
+           <widget class="QWidget" name="widget_inventory" native="true">
+            <layout class="QVBoxLayout" name="verticalLayout_13">
+             <item>
+              <widget class="QFrame" name="main_frame_inventory">
+               <property name="styleSheet">
+                <string notr="true">QFrame {
+    background-color: #4D8DBA; /* Warna kartu putih */
+    border-radius: 10px; /* Ujung kartu agak melengkung */
+}</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::Shape::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Shadow::Raised</enum>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_9">
+                <item row="2" column="0" colspan="4">
+                 <layout class="QHBoxLayout" name="horizontalLayout_8">
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <widget class="QLabel" name="label_17">
+                    <property name="font">
+                     <font>
+                      <pointsize>20</pointsize>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Total Barang : </string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_28">
+                    <property name="font">
+                     <font>
+                      <pointsize>20</pointsize>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>xx</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_13">
+                    <property name="orientation">
+                     <enum>Qt::Orientation::Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                     <enum>QSizePolicy::Policy::Fixed</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item alignment="Qt::AlignmentFlag::AlignVCenter">
+                   <widget class="QLabel" name="label_18">
+                    <property name="font">
+                     <font>
+                      <family>Segoe UI</family>
+                      <pointsize>20</pointsize>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Stok Krisis :</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_29">
+                    <property name="font">
+                     <font>
+                      <pointsize>20</pointsize>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QLabel{
+color: #FF0000;}</string>
+                    </property>
+                    <property name="text">
+                     <string>xx</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_12">
+                    <property name="orientation">
+                     <enum>Qt::Orientation::Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                     <enum>QSizePolicy::Policy::Expanding</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </item>
+                <item row="0" column="3">
+                 <widget class="QPushButton" name="pushButton_5">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>14</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton {
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+padding: 5px;
+}
+QPushButton:hover {
+    background-color: #218838;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>Tambah Barang</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="resource/resource.qrc">
+                    <normaloff>:/icons/plus-solid.png</normaloff>:/icons/plus-solid.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>32</width>
+                    <height>32</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLineEdit" name="lineEdit_6">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit{
+background-color : #BCCCDC;
+border-radius : 5px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>Cari Barang...</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0" colspan="4">
+                 <widget class="QFrame" name="frame_21">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QFrame {
+    background-color: #97D7FF; /* Warna kartu putih */
+    border-radius: 10px; /* Ujung kartu agak melengkung */
+}</string>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::Shape::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Shadow::Raised</enum>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_9">
+                   <item>
+                    <widget class="QTableWidget" name="tableWidget_3">
+                     <property name="font">
+                      <font>
+                       <pointsize>11</pointsize>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">
+QHeaderView::section {
+    color:#042b62;  /* Mengubah warna teks agar mudah dibaca */
+   border-right: 1px solid #c0c0c0; /* Garis pembatas vertikal antar kolom */
+    border-bottom: 2px solid #5a5a5a; /* Garis bawah tegas untuk memisahkan header dan isi */
+    border-top: none;
+    border-left: none;
+    font-weight: bold;
+    font-size: 11pt;
+    background-color: white;
+    padding: 5px;
+}
+QTableWidget{
+background-color : white;}</string>
+                     </property>
+                     <property name="sortingEnabled">
+                      <bool>false</bool>
+                     </property>
+                     <attribute name="horizontalHeaderDefaultSectionSize">
+                      <number>135</number>
+                     </attribute>
+                     <attribute name="horizontalHeaderStretchLastSection">
+                      <bool>true</bool>
+                     </attribute>
+                     <attribute name="verticalHeaderVisible">
+                      <bool>false</bool>
+                     </attribute>
+                     <attribute name="verticalHeaderCascadingSectionResizes">
+                      <bool>true</bool>
+                     </attribute>
+                     <column>
+                      <property name="text">
+                       <string>no</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Kode Barang</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Produk</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Kategori</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Harga_Modal</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Harga_Jual</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Stok</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Aksi</string>
+                      </property>
+                     </column>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QPushButton" name="pushButton_6">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>14</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">/* Efek saat tombol disorot mouse (Hover) */
+QPushButton:hover {
+    background-color: #334155; /* Berubah jadi biru sedikit lebih terang saat disorot */
+    border-left: 4px solid #3B82F6; /* Muncul garis biru neon di pinggir kiri */
+}
+QPushButton {
+    text-align: center;
+	background-color:  #086288;
+	padding: 5px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>Cari  </string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="resource/resource.qrc">
+                    <normaloff>:/icons/magnifying-glass-solid.png</normaloff>:/icons/magnifying-glass-solid.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>32</width>
+                    <height>32</height>
+                   </size>
+                  </property>
+                  <property name="checkable">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="2">
+                 <spacer name="horizontalSpacer_14">
+                  <property name="orientation">
+                   <enum>Qt::Orientation::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Policy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>10</width>
+                    <height>10</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page_penjualan">
+         <layout class="QGridLayout" name="gridLayout_13">
+          <item row="0" column="0">
+           <widget class="QWidget" name="widget_penjualan" native="true">
+            <layout class="QGridLayout" name="gridLayout_14">
+             <item row="0" column="0">
+              <widget class="QFrame" name="main_frmae_penjualan">
+               <property name="styleSheet">
+                <string notr="true">QFrame {
+    background-color: #4D8DBA; /* Warna kartu putih */
+    border-radius: 10px; /* Ujung kartu agak melengkung */
+}</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::Shape::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Shadow::Raised</enum>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_15">
+                <item row="0" column="0">
+                 <layout class="QHBoxLayout" name="horizontalLayout_10">
+                  <item>
+                   <widget class="QLabel" name="label_30">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>11</pointsize>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Periode: </string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QDateEdit" name="dateEdit">
+                    <property name="font">
+                     <font>
+                      <pointsize>11</pointsize>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_31">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>11</pointsize>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>S/D</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QDateEdit" name="dateEdit_2">
+                    <property name="font">
+                     <font>
+                      <pointsize>11</pointsize>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="lineEdit_7">
+                    <property name="font">
+                     <font>
+                      <pointsize>11</pointsize>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QLineEdit{
+background-color : #BCCCDC;
+border-radius : 5px;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Cari No.Struk...</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_12">
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">/* Efek saat tombol disorot mouse (Hover) */
+QPushButton:hover {
+    background-color: #334155; /* Berubah jadi biru sedikit lebih terang saat disorot */
+    border-left: 4px solid #3B82F6; /* Muncul garis biru neon di pinggir kiri */
+}
+QPushButton {
+    text-align: center;
+	background-color:  #086288;
+	padding: 5px;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resource/resource.qrc">
+                      <normaloff>:/icons/magnifying-glass-solid.png</normaloff>:/icons/magnifying-glass-solid.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>24</width>
+                      <height>24</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_7">
+                    <property name="font">
+                     <font>
+                      <pointsize>11</pointsize>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">/* Efek saat tombol disorot mouse (Hover) */
+QPushButton:hover {
+    background-color: #334155; /* Berubah jadi biru sedikit lebih terang saat disorot */
+    border-left: 4px solid #3B82F6; /* Muncul garis biru neon di pinggir kiri */
+}
+QPushButton {
+    text-align: center;
+	background-color:  #086288;
+	padding: 5px;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Cetak Laporan</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resource/resource.qrc">
+                      <normaloff>:/icons/print-solid.png</normaloff>:/icons/print-solid.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>24</width>
+                      <height>24</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_8">
+                    <property name="font">
+                     <font>
+                      <pointsize>11</pointsize>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">/* Efek saat tombol disorot mouse (Hover) */
+QPushButton:hover {
+    background-color: #107C41; /* Berubah jadi biru sedikit lebih terang saat disorot */
+    border-left: 4px solid #3B82F6; /* Muncul garis biru neon di pinggir kiri */
+}
+QPushButton {
+    text-align: center;
+	background-color:  #1D6F42;
+	padding: 5px;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Export (.xlsx)</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resource/resource.qrc">
+                      <normaloff>:/icons/file-solid.png</normaloff>:/icons/file-solid.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>24</width>
+                      <height>24</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item row="1" column="0">
+                 <layout class="QHBoxLayout" name="horizontalLayout_11">
+                  <item>
+                   <widget class="QFrame" name="frame_24">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>150</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QFrame {
+    background-color: #97D7FF; /* Warna kartu putih */
+    border-radius: 10px; /* Ujung kartu agak melengkung */
+}</string>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::Shape::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Shadow::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_14">
+                     <item alignment="Qt::AlignmentFlag::AlignHCenter">
+                      <widget class="QLabel" name="label_32">
+                       <property name="font">
+                        <font>
+                         <pointsize>18</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLabel {
+    color: #042b62; }
+</string>
+                       </property>
+                       <property name="text">
+                        <string>Total Pendapatan </string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item alignment="Qt::AlignmentFlag::AlignHCenter">
+                      <widget class="QLabel" name="label_33">
+                       <property name="font">
+                        <font>
+                         <pointsize>20</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>0</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_25">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>150</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QFrame {
+    background-color: #97D7FF; /* Warna kartu putih */
+    border-radius: 10px; /* Ujung kartu agak melengkung */
+}</string>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::Shape::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Shadow::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_15">
+                     <item alignment="Qt::AlignmentFlag::AlignHCenter">
+                      <widget class="QLabel" name="label_35">
+                       <property name="font">
+                        <font>
+                         <pointsize>18</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLabel {
+    color: #042b62; }
+</string>
+                       </property>
+                       <property name="text">
+                        <string>Total Transaksi</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item alignment="Qt::AlignmentFlag::AlignHCenter">
+                      <widget class="QLabel" name="label_34">
+                       <property name="font">
+                        <font>
+                         <pointsize>20</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>0</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_26">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>150</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QFrame {
+    background-color: #97D7FF; /* Warna kartu putih */
+    border-radius: 10px; /* Ujung kartu agak melengkung */
+}</string>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::Shape::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Shadow::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_16">
+                     <item alignment="Qt::AlignmentFlag::AlignHCenter">
+                      <widget class="QLabel" name="label_37">
+                       <property name="font">
+                        <font>
+                         <pointsize>18</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLabel {
+    color: #042b62; }
+</string>
+                       </property>
+                       <property name="text">
+                        <string>Barang Terjual</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item alignment="Qt::AlignmentFlag::AlignHCenter">
+                      <widget class="QLabel" name="label_36">
+                       <property name="font">
+                        <font>
+                         <pointsize>20</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>0</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QFrame" name="frame_23">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QFrame {
+    background-color: #97D7FF; /* Warna kartu putih */
+    border-radius: 10px; /* Ujung kartu agak melengkung */
+}</string>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::Shape::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Shadow::Raised</enum>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_17">
+                   <item>
+                    <widget class="QLabel" name="label_38">
+                     <property name="font">
+                      <font>
+                       <pointsize>12</pointsize>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>Riwayat Transaksi </string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QTableWidget" name="tableWidget_4">
+                     <property name="font">
+                      <font>
+                       <pointsize>11</pointsize>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">
+QHeaderView::section {
+    color:#042b62;  /* Mengubah warna teks agar mudah dibaca */
+   border-right: 1px solid #c0c0c0; /* Garis pembatas vertikal antar kolom */
+    border-bottom: 2px solid #5a5a5a; /* Garis bawah tegas untuk memisahkan header dan isi */
+    border-top: none;
+    border-left: none;
+    font-weight: bold;
+    font-size: 11pt;
+    background-color: white;
+    padding: 5px;
+}
+QTableWidget{
+background-color : white;}</string>
+                     </property>
+                     <property name="sortingEnabled">
+                      <bool>false</bool>
+                     </property>
+                     <attribute name="horizontalHeaderDefaultSectionSize">
+                      <number>135</number>
+                     </attribute>
+                     <attribute name="horizontalHeaderStretchLastSection">
+                      <bool>true</bool>
+                     </attribute>
+                     <attribute name="verticalHeaderVisible">
+                      <bool>false</bool>
+                     </attribute>
+                     <attribute name="verticalHeaderCascadingSectionResizes">
+                      <bool>true</bool>
+                     </attribute>
+                     <column>
+                      <property name="text">
+                       <string>No</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>No Struk</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Tanggal</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Waktu</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Kasir</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Total Belanja</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Metode</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Aksi</string>
+                      </property>
+                     </column>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page_user">
+         <layout class="QHBoxLayout" name="horizontalLayout_12">
+          <item>
+           <widget class="QWidget" name="widget_user" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_15">
+             <item>
+              <widget class="QFrame" name="main_frmae_user">
+               <property name="styleSheet">
+                <string notr="true">QFrame {
+    background-color: #4D8DBA; /* Warna kartu putih */
+    border-radius: 10px; /* Ujung kartu agak melengkung */
+}</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::Shape::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Shadow::Raised</enum>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_18">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_16">
+                  <item>
+                   <widget class="QLineEdit" name="lineEdit_14">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>14</pointsize>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QLineEdit{
+background-color : #BCCCDC;
+border-radius : 5px;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Cari User...</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_14">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>14</pointsize>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">/* Efek saat tombol disorot mouse (Hover) */
+QPushButton:hover {
+    background-color: #334155; /* Berubah jadi biru sedikit lebih terang saat disorot */
+    border-left: 4px solid #3B82F6; /* Muncul garis biru neon di pinggir kiri */
+}
+QPushButton {
+    text-align: center;
+	background-color:  #086288;
+	padding: 5px;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Cari  </string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resource/resource.qrc">
+                      <normaloff>:/icons/magnifying-glass-solid.png</normaloff>:/icons/magnifying-glass-solid.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>32</width>
+                      <height>32</height>
+                     </size>
+                    </property>
+                    <property name="checkable">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_17">
+                    <property name="orientation">
+                     <enum>Qt::Orientation::Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                     <enum>QSizePolicy::Policy::Fixed</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>10</width>
+                      <height>10</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_13">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>14</pointsize>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton {
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+padding: 5px;
+}
+QPushButton:hover {
+    background-color: #218838;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Tambah User</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resource/resource.qrc">
+                      <normaloff>:/icons/plus-solid.png</normaloff>:/icons/plus-solid.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>32</width>
+                      <height>32</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QFrame" name="frame_28">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QFrame {
+    background-color: #97D7FF; /* Warna kartu putih */
+    border-radius: 10px; /* Ujung kartu agak melengkung */
+}</string>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::Shape::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Shadow::Raised</enum>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_14">
+                   <item>
+                    <widget class="QTableWidget" name="tableWidget_5">
+                     <property name="font">
+                      <font>
+                       <pointsize>11</pointsize>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">
+QHeaderView::section {
+    color:#042b62;  /* Mengubah warna teks agar mudah dibaca */
+   border-right: 1px solid #c0c0c0; /* Garis pembatas vertikal antar kolom */
+    border-bottom: 2px solid #5a5a5a; /* Garis bawah tegas untuk memisahkan header dan isi */
+    border-top: none;
+    border-left: none;
+    font-weight: bold;
+    font-size: 11pt;
+    background-color: white;
+    padding: 5px;
+}
+QTableWidget{
+background-color : white;}</string>
+                     </property>
+                     <property name="sortingEnabled">
+                      <bool>false</bool>
+                     </property>
+                     <attribute name="horizontalHeaderDefaultSectionSize">
+                      <number>135</number>
+                     </attribute>
+                     <attribute name="horizontalHeaderStretchLastSection">
+                      <bool>true</bool>
+                     </attribute>
+                     <attribute name="verticalHeaderVisible">
+                      <bool>false</bool>
+                     </attribute>
+                     <attribute name="verticalHeaderCascadingSectionResizes">
+                      <bool>true</bool>
+                     </attribute>
+                     <column>
+                      <property name="text">
+                       <string>No</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>ID User</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Nama Lengkap</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Username</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Role</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Status</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Aksi</string>
+                      </property>
+                     </column>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_13">
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <widget class="QLabel" name="label_39">
+                    <property name="font">
+                     <font>
+                      <pointsize>20</pointsize>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Total User : </string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_40">
+                    <property name="font">
+                     <font>
+                      <pointsize>20</pointsize>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>0</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_15">
+                    <property name="orientation">
+                     <enum>Qt::Orientation::Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                     <enum>QSizePolicy::Policy::Fixed</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item alignment="Qt::AlignmentFlag::AlignVCenter">
+                   <widget class="QLabel" name="label_41">
+                    <property name="font">
+                     <font>
+                      <family>Segoe UI</family>
+                      <pointsize>20</pointsize>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>User Aktif :</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_42">
+                    <property name="font">
+                     <font>
+                      <pointsize>20</pointsize>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>0</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_16">
+                    <property name="orientation">
+                     <enum>Qt::Orientation::Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                     <enum>QSizePolicy::Policy::Fixed</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_44">
+                    <property name="font">
+                     <font>
+                      <family>Segoe UI</family>
+                      <pointsize>20</pointsize>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>User Nonaktif :</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_43">
+                    <property name="font">
+                     <font>
+                      <pointsize>20</pointsize>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>0</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_18">
+                    <property name="orientation">
+                     <enum>Qt::Orientation::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page_setting">
+         <layout class="QHBoxLayout" name="horizontalLayout_17">
+          <item>
+           <widget class="QWidget" name="widget_setting" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_21">
+             <item>
+              <widget class="QFrame" name="main_frmae_setting">
+               <property name="styleSheet">
+                <string notr="true">QFrame {
+    background-color: #4D8DBA; /* Warna kartu putih */
+    border-radius: 10px; /* Ujung kartu agak melengkung */
+}</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::Shape::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Shadow::Raised</enum>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_16">
+                <item row="0" column="0" rowspan="3">
+                 <widget class="QFrame" name="frame_30">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QFrame {
+    background-color: #97D7FF; /* Warna kartu putih */
+    border-radius: 10px; /* Ujung kartu agak melengkung */
+}</string>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::Shape::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Shadow::Raised</enum>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_21">
+                   <item>
+                    <spacer name="horizontalSpacer_19">
+                     <property name="orientation">
+                      <enum>Qt::Orientation::Vertical</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Policy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>20</width>
+                       <height>10</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_46">
+                     <property name="font">
+                      <font>
+                       <pointsize>20</pointsize>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>INFORMASI TOKO &amp; STRUK</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="verticalSpacer_13">
+                     <property name="orientation">
+                      <enum>Qt::Orientation::Vertical</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Policy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>20</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_45">
+                     <property name="font">
+                      <font>
+                       <pointsize>14</pointsize>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>NAMA TOKO :</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="lineEdit_15">
+                     <property name="font">
+                      <font>
+                       <pointsize>11</pointsize>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QLineEdit {
+    background-color: white;
+    color: black;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 5px;
+}</string>
+                     </property>
+                     <property name="readOnly">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_47">
+                     <property name="font">
+                      <font>
+                       <pointsize>14</pointsize>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>ALAMAT :</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="lineEdit_16">
+                     <property name="font">
+                      <font>
+                       <pointsize>11</pointsize>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QLineEdit {
+    background-color: white;
+    color: black;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 5px;
+}</string>
+                     </property>
+                     <property name="readOnly">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_48">
+                     <property name="font">
+                      <font>
+                       <pointsize>14</pointsize>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>No. TELEPON/WhatsApp :</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="lineEdit_17">
+                     <property name="font">
+                      <font>
+                       <pointsize>11</pointsize>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QLineEdit {
+    background-color: white;
+    color: black;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 5px;
+}</string>
+                     </property>
+                     <property name="readOnly">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_49">
+                     <property name="font">
+                      <font>
+                       <pointsize>14</pointsize>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>PESAN STRUK/FOOTER :</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPlainTextEdit" name="plainTextEdit">
+                     <property name="styleSheet">
+                      <string notr="true">QPlainTextEdit {
+    background-color: white;
+    color: black;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 5px;
+}</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <layout class="QVBoxLayout" name="verticalLayout_20">
+                  <item>
+                   <widget class="QFrame" name="frame_31">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QFrame {
+    background-color: #97D7FF; /* Warna kartu putih */
+    border-radius: 10px; /* Ujung kartu agak melengkung */
+}</string>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::Shape::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Shadow::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_22">
+                     <item>
+                      <widget class="QLabel" name="label_50">
+                       <property name="font">
+                        <font>
+                         <pointsize>20</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>PERANGKAT HARDWARE</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_53">
+                       <property name="font">
+                        <font>
+                         <pointsize>14</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>MODEL PRINTER:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="lineEdit_19">
+                       <property name="font">
+                        <font>
+                         <pointsize>11</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLineEdit {
+    background-color: white;
+    color: black;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 5px;
+}</string>
+                       </property>
+                       <property name="readOnly">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_32">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QFrame {
+    background-color: #97D7FF; /* Warna kartu putih */
+    border-radius: 10px; /* Ujung kartu agak melengkung */
+}</string>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::Shape::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Shadow::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_23">
+                     <item>
+                      <widget class="QLabel" name="label_51">
+                       <property name="font">
+                        <font>
+                         <pointsize>20</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>INFORMASI DATABASE</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_52">
+                       <property name="font">
+                        <font>
+                         <pointsize>14</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>PATH Database :</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="lineEdit_18">
+                       <property name="font">
+                        <font>
+                         <pointsize>11</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLineEdit {
+    background-color: white;
+    color: black;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 5px;
+}</string>
+                       </property>
+                       <property name="readOnly">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QPushButton" name="pushButton_15">
+                  <property name="font">
+                   <font>
+                    <pointsize>20</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton {
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+padding: 30px;
+}
+QPushButton:hover {
+    background-color: #218838;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>SIMPAN PERUBAHAN</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </widget>
       </item>
      </layout>

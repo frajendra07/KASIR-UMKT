@@ -1,5 +1,12 @@
 <RCC>
   <qresource prefix="icons">
+    <file>file-solid.png</file>
+    <file>print-solid.png</file>
+    <file>qrcode-solid.png</file>
+    <file>plus-solid.png</file>
+    <file>circle-check-solid.png</file>
+    <file>receipt-solid.png</file>
+    <file>trash-can-solid.png</file>
     <file>magnifying-glass-solid.png</file>
     <file>shop-solid (1).png</file>
     <file>bell-solid.png</file>

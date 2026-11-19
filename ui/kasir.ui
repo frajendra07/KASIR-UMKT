@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1223</width>
+    <width>1219</width>
     <height>927</height>
    </rect>
   </property>
@@ -30,8 +30,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: #086288;
-border-radius: 10px;</string>
+       <string notr="true">background-color: #086288</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::Shape::NoFrame</enum>
@@ -111,9 +110,6 @@ border-radius: 10px;</string>
            <bold>false</bold>
           </font>
          </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
          <property name="text">
           <string/>
          </property>
@@ -129,6 +125,36 @@ border-radius: 10px;</string>
          </property>
          <property name="flat">
           <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="keluar_button">
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>12</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #dc3545;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #c82333;
+}</string>
+         </property>
+         <property name="text">
+          <string>KELUAR</string>
+         </property>
+         <property name="icon">
+          <iconset resource="resource/resource.qrc">
+           <normaloff>:/icons/right-from-bracket-solid.png</normaloff>:/icons/right-from-bracket-solid.png</iconset>
          </property>
         </widget>
        </item>
@@ -151,7 +177,7 @@ border-radius: 10px;</string>
       </property>
       <layout class="QGridLayout" name="gridLayout_7">
        <item row="0" column="0">
-        <widget class="QFrame" name="frame_10">
+        <widget class="QFrame" name="kasir_frame">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
            <horstretch>6</horstretch>
@@ -223,7 +249,7 @@ border-radius: 10px;</string>
            </spacer>
           </item>
           <item row="1" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <layout class="QHBoxLayout" name="search_item_layout">
             <item>
              <spacer name="horizontalSpacer_7">
               <property name="orientation">
@@ -238,7 +264,7 @@ border-radius: 10px;</string>
              </spacer>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit">
+             <widget class="QLineEdit" name="search_item_input">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                 <horstretch>0</horstretch>
@@ -282,7 +308,7 @@ border-radius : 5px;
              </spacer>
             </item>
             <item>
-             <widget class="QPushButton" name="pushButton">
+             <widget class="QPushButton" name="search_item_button">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -354,7 +380,7 @@ padding: 5px;
            </layout>
           </item>
           <item row="3" column="1">
-           <widget class="QTableWidget" name="tableWidget_2">
+           <widget class="QTableWidget" name="kasir_tableWidget">
             <property name="font">
              <font>
               <pointsize>11</pointsize>
@@ -465,7 +491,7 @@ background-color : white;}</string>
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QFrame" name="frame_12">
+        <widget class="QFrame" name="transaction_frame">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
            <horstretch>2</horstretch>
@@ -491,12 +517,12 @@ background-color : white;}</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_6">
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="0,0">
+           <layout class="QHBoxLayout" name="id_layout" stretch="0,0">
             <property name="sizeConstraint">
              <enum>QLayout::SizeConstraint::SetFixedSize</enum>
             </property>
             <item>
-             <widget class="QLabel" name="label_11">
+             <widget class="QLabel" name="id_label">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -520,7 +546,7 @@ background-color : white;}</string>
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_2">
+             <widget class="QLineEdit" name="id_input">
               <property name="font">
                <font>
                 <pointsize>11</pointsize>
@@ -544,7 +570,7 @@ background-color : white;}</string>
            </layout>
           </item>
           <item>
-           <widget class="QFrame" name="frame_14">
+           <widget class="QFrame" name="detail_transaction_frame">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -565,7 +591,7 @@ background-color : white;}</string>
             </property>
             <layout class="QGridLayout" name="gridLayout_10">
              <item row="5" column="1">
-              <widget class="QLineEdit" name="lineEdit_4">
+              <widget class="QLineEdit" name="diskon_input">
                <property name="font">
                 <font>
                  <pointsize>11</pointsize>
@@ -587,7 +613,7 @@ background-color : white;}</string>
               </widget>
              </item>
              <item row="0" column="0" colspan="2" alignment="Qt::AlignmentFlag::AlignHCenter">
-              <widget class="QLabel" name="label_12">
+              <widget class="QLabel" name="detail_label">
                <property name="font">
                 <font>
                  <pointsize>16</pointsize>
@@ -605,7 +631,7 @@ background-color : white;}</string>
               </widget>
              </item>
              <item row="2" column="0">
-              <widget class="QLabel" name="label_13">
+              <widget class="QLabel" name="subtotal_label">
                <property name="font">
                 <font>
                  <pointsize>14</pointsize>
@@ -623,7 +649,7 @@ background-color : white;}</string>
               </widget>
              </item>
              <item row="5" column="0">
-              <widget class="QLabel" name="label_14">
+              <widget class="QLabel" name="diskon_total">
                <property name="font">
                 <font>
                  <pointsize>14</pointsize>
@@ -641,7 +667,7 @@ background-color : white;}</string>
               </widget>
              </item>
              <item row="6" column="0" colspan="2">
-              <widget class="QFrame" name="frame_13">
+              <widget class="QFrame" name="total_frame">
                <property name="styleSheet">
                 <string notr="true">QFrame {
     background-color: #97D7FF; /* Warna kartu putih */
@@ -674,7 +700,7 @@ background-color : white;}</string>
                  </widget>
                 </item>
                 <item row="1" column="0">
-                 <widget class="QLineEdit" name="lineEdit_5">
+                 <widget class="QLineEdit" name="total_input">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                     <horstretch>0</horstretch>
@@ -705,7 +731,7 @@ background-color : white;}</string>
               </widget>
              </item>
              <item row="2" column="1">
-              <widget class="QLineEdit" name="lineEdit_3">
+              <widget class="QLineEdit" name="subtotal_input">
                <property name="font">
                 <font>
                  <pointsize>11</pointsize>
@@ -730,7 +756,7 @@ background-color : white;}</string>
            </widget>
           </item>
           <item>
-           <widget class="QFrame" name="frame_15">
+           <widget class="QFrame" name="payment_frame">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -751,7 +777,7 @@ background-color : white;}</string>
             </property>
             <layout class="QGridLayout" name="gridLayout_12">
              <item row="0" column="0" rowspan="2" colspan="5" alignment="Qt::AlignmentFlag::AlignHCenter">
-              <widget class="QLabel" name="label_16">
+              <widget class="QLabel" name="payment_label">
                <property name="font">
                 <font>
                  <pointsize>16</pointsize>
@@ -769,7 +795,7 @@ background-color : white;}</string>
               </widget>
              </item>
              <item row="2" column="1">
-              <widget class="QPushButton" name="pushButton_2">
+              <widget class="QPushButton" name="tunai_button">
                <property name="font">
                 <font>
                  <family>Verdana</family>
@@ -797,7 +823,7 @@ QPushButton {
               </widget>
              </item>
              <item row="2" column="3">
-              <widget class="QPushButton" name="pushButton_3">
+              <widget class="QPushButton" name="debit_button">
                <property name="font">
                 <font>
                  <family>Verdana</family>
@@ -825,7 +851,7 @@ QPushButton {
               </widget>
              </item>
              <item row="2" column="2">
-              <widget class="QPushButton" name="pushButton_4">
+              <widget class="QPushButton" name="qris_button">
                <property name="font">
                 <font>
                  <family>Verdana</family>
@@ -853,17 +879,18 @@ QPushButton {
               </widget>
              </item>
              <item row="3" column="0" colspan="5">
-              <widget class="QStackedWidget" name="stackedWidget">
+              <widget class="QStackedWidget" name="payment_widget">
                <property name="styleSheet">
-                <string notr="true"/>
+                <string notr="true">
+background: transparent; border: none;</string>
                </property>
                <property name="currentIndex">
-                <number>2</number>
+                <number>0</number>
                </property>
-               <widget class="QWidget" name="page_4">
+               <widget class="QWidget" name="tunai_page">
                 <layout class="QVBoxLayout" name="verticalLayout_7">
                  <item>
-                  <widget class="QFrame" name="frame_19">
+                  <widget class="QFrame" name="tunai_frame">
                    <property name="frameShape">
                     <enum>QFrame::Shape::StyledPanel</enum>
                    </property>
@@ -872,7 +899,7 @@ QPushButton {
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_11">
                     <item>
-                     <widget class="QLabel" name="label_23">
+                     <widget class="QLabel" name="nominal_tunai_label">
                       <property name="font">
                        <font>
                         <family>Verdana</family>
@@ -880,18 +907,13 @@ QPushButton {
                         <bold>true</bold>
                        </font>
                       </property>
-                      <property name="styleSheet">
-                       <string notr="true">QLabel {
-    color: #042b62; }
-</string>
-                      </property>
                       <property name="text">
                        <string>Nominal :</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLineEdit" name="lineEdit_12">
+                     <widget class="QLineEdit" name="nominal_tunai_input">
                       <property name="font">
                        <font>
                         <pointsize>11</pointsize>
@@ -914,7 +936,7 @@ QPushButton {
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLabel" name="label_24">
+                     <widget class="QLabel" name="change_tunai_label">
                       <property name="font">
                        <font>
                         <family>Verdana</family>
@@ -922,18 +944,13 @@ QPushButton {
                         <bold>true</bold>
                        </font>
                       </property>
-                      <property name="styleSheet">
-                       <string notr="true">QLabel {
-    color: #042b62; }
-</string>
-                      </property>
                       <property name="text">
                        <string>Kembalian :</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLineEdit" name="lineEdit_13">
+                     <widget class="QLineEdit" name="change_tunai_input">
                       <property name="font">
                        <font>
                         <pointsize>11</pointsize>
@@ -960,10 +977,10 @@ QPushButton {
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="page_3">
+               <widget class="QWidget" name="qris_page">
                 <layout class="QVBoxLayout" name="verticalLayout_10">
                  <item>
-                  <widget class="QFrame" name="frame_18">
+                  <widget class="QFrame" name="qris_frame">
                    <property name="frameShape">
                     <enum>QFrame::Shape::StyledPanel</enum>
                    </property>
@@ -972,7 +989,7 @@ QPushButton {
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_9">
                     <item>
-                     <widget class="QLabel" name="label_19">
+                     <widget class="QLabel" name="nominal_qris_label">
                       <property name="font">
                        <font>
                         <family>Verdana</family>
@@ -991,7 +1008,7 @@ QPushButton {
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLineEdit" name="lineEdit_8">
+                     <widget class="QLineEdit" name="nominal_qris_input">
                       <property name="font">
                        <font>
                         <pointsize>11</pointsize>
@@ -1013,7 +1030,7 @@ QPushButton {
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLabel" name="label_21">
+                     <widget class="QLabel" name="reference_qris_label">
                       <property name="font">
                        <font>
                         <family>Verdana</family>
@@ -1032,7 +1049,7 @@ QPushButton {
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLineEdit" name="lineEdit_10">
+                     <widget class="QLineEdit" name="reference_qris_input">
                       <property name="font">
                        <font>
                         <pointsize>11</pointsize>
@@ -1053,7 +1070,7 @@ QPushButton {
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLabel" name="label_26">
+                     <widget class="QLabel" name="provider_qris_label">
                       <property name="font">
                        <font>
                         <family>Verdana</family>
@@ -1072,7 +1089,7 @@ QPushButton {
                      </widget>
                     </item>
                     <item>
-                     <widget class="QComboBox" name="comboBox_2">
+                     <widget class="QComboBox" name="provider_qris_comboBox">
                       <property name="styleSheet">
                        <string notr="true">QComboBox {
     background-color: #ffffff;
@@ -1102,10 +1119,10 @@ QComboBox::drop-down {
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="page_2">
+               <widget class="QWidget" name="debit_page">
                 <layout class="QHBoxLayout" name="horizontalLayout_6">
                  <item>
-                  <widget class="QFrame" name="frame_20">
+                  <widget class="QFrame" name="debit_frame">
                    <property name="frameShape">
                     <enum>QFrame::Shape::StyledPanel</enum>
                    </property>
@@ -1114,7 +1131,7 @@ QComboBox::drop-down {
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_12">
                     <item>
-                     <widget class="QLabel" name="label_20">
+                     <widget class="QLabel" name="nominal_debit_label">
                       <property name="font">
                        <font>
                         <family>Verdana</family>
@@ -1122,18 +1139,13 @@ QComboBox::drop-down {
                         <bold>true</bold>
                        </font>
                       </property>
-                      <property name="styleSheet">
-                       <string notr="true">QLabel {
-    color: #042b62; }
-</string>
-                      </property>
                       <property name="text">
                        <string>Nominal :</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLineEdit" name="lineEdit_9">
+                     <widget class="QLineEdit" name="nominal_debit_input">
                       <property name="font">
                        <font>
                         <pointsize>11</pointsize>
@@ -1155,7 +1167,7 @@ QComboBox::drop-down {
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLabel" name="label_22">
+                     <widget class="QLabel" name="reference_debit_label">
                       <property name="font">
                        <font>
                         <family>Verdana</family>
@@ -1163,18 +1175,13 @@ QComboBox::drop-down {
                         <bold>true</bold>
                        </font>
                       </property>
-                      <property name="styleSheet">
-                       <string notr="true">QLabel {
-    color: #042b62; }
-</string>
-                      </property>
                       <property name="text">
                        <string>ID. Refrensi :</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLineEdit" name="lineEdit_11">
+                     <widget class="QLineEdit" name="reference_debit_input">
                       <property name="font">
                        <font>
                         <pointsize>11</pointsize>
@@ -1196,7 +1203,7 @@ QComboBox::drop-down {
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLabel" name="label_25">
+                     <widget class="QLabel" name="bank_debit_label">
                       <property name="font">
                        <font>
                         <family>Verdana</family>
@@ -1204,18 +1211,13 @@ QComboBox::drop-down {
                         <bold>true</bold>
                        </font>
                       </property>
-                      <property name="styleSheet">
-                       <string notr="true">QLabel {
-    color: #042b62; }
-</string>
-                      </property>
                       <property name="text">
                        <string>Bank :</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QComboBox" name="comboBox">
+                     <widget class="QComboBox" name="bank_debit_comboBox">
                       <property name="styleSheet">
                        <string notr="true">QComboBox {
     background-color: #ffffff;
@@ -1251,7 +1253,7 @@ QComboBox::drop-down {
            </widget>
           </item>
           <item>
-           <widget class="QFrame" name="frame_16">
+           <widget class="QFrame" name="transaction_action_frame">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -1272,7 +1274,7 @@ QComboBox::drop-down {
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_8">
              <item alignment="Qt::AlignmentFlag::AlignHCenter">
-              <widget class="QLabel" name="label_27">
+              <widget class="QLabel" name="transaction_action_label">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                  <horstretch>0</horstretch>
@@ -1292,7 +1294,7 @@ QComboBox::drop-down {
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_9">
+              <widget class="QPushButton" name="payment_proses_button">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
                  <horstretch>0</horstretch>
@@ -1326,7 +1328,7 @@ QPushButton:hover {
                </property>
                <property name="icon">
                 <iconset>
-                 <normaloff>resource/circle-check-solid.png</normaloff>resource/circle-check-solid.png</iconset>
+                 <normaloff>C:/Users/bianv/.designer/backup/resource/circle-check-solid.png</normaloff>C:/Users/bianv/.designer/backup/resource/circle-check-solid.png</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -1340,7 +1342,7 @@ QPushButton:hover {
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_10">
+              <widget class="QPushButton" name="print_receipt_button">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
                  <horstretch>0</horstretch>
@@ -1373,7 +1375,7 @@ QPushButton {
                </property>
                <property name="icon">
                 <iconset>
-                 <normaloff>resource/receipt-solid.png</normaloff>resource/receipt-solid.png</iconset>
+                 <normaloff>C:/Users/bianv/.designer/backup/resource/receipt-solid.png</normaloff>C:/Users/bianv/.designer/backup/resource/receipt-solid.png</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -1387,7 +1389,7 @@ QPushButton {
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_11">
+              <widget class="QPushButton" name="cancel_transaction_button">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
                  <horstretch>0</horstretch>
@@ -1421,7 +1423,7 @@ QPushButton:hover {
                </property>
                <property name="icon">
                 <iconset>
-                 <normaloff>resource/trash-can-solid.png</normaloff>resource/trash-can-solid.png</iconset>
+                 <normaloff>C:/Users/bianv/.designer/backup/resource/trash-can-solid.png</normaloff>C:/Users/bianv/.designer/backup/resource/trash-can-solid.png</iconset>
                </property>
                <property name="iconSize">
                 <size>

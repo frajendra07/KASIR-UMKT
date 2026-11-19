@@ -34,7 +34,7 @@
       </property>
       <layout class="QGridLayout" name="gridLayout_2">
        <item row="4" column="0">
-        <widget class="QLineEdit" name="lineEdit">
+        <widget class="QLineEdit" name="username_input">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -57,7 +57,11 @@
 background-color : #FFFFFF;
 border-radius : 5px;
 padding: 10px;
+color-text:blue;
 }</string>
+         </property>
+         <property name="text">
+          <string>sas</string>
          </property>
         </widget>
        </item>
@@ -89,7 +93,7 @@ padding: 10px;
         </widget>
        </item>
        <item row="6" column="0">
-        <widget class="QLineEdit" name="lineEdit_2">
+        <widget class="QLineEdit" name="password_input">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -112,7 +116,14 @@ padding: 10px;
 background-color : #FFFFFF;
 border-radius : 5px;
 padding: 10px;
+color-text:blue;
 }</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="echoMode">
+          <enum>QLineEdit::EchoMode::Password</enum>
          </property>
         </widget>
        </item>
@@ -250,21 +261,6 @@ padding: 10px;
      </widget>
     </item>
    </layout>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>735</width>
-     <height>33</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
   </widget>
  </widget>
  <resources/>
